@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do pokemon</title>
+    <link rel="icon" href="/IMG/icon.jpg">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body id= "fundo2">
+ 
+
+
+<h1>
+    <nav>
+<p class="botao1"><a href="http://localhost:3000">Home</a></p>
+<p class="botao2"><a href="http://localhost:3000/Detalhes">Detalhes</a></p>
+    </nav>
+</h1>
+
+
+<section class ="esp">
+
+    <main>
+
+<header>
+<h3 id = "cae">
+
+    <form action="/info" method="POST">
+        <div>
+            <label for="Numero">Numero:</label>
+            <input type="number" name="Numero" id="input_numero" placeholder="Digite o numero do pokemon" required>
+        </div>
+    
+        <div>
+            <label for="Nome">Nome: </label>
+            <input type="text" name="Nome" id="input_nome" placeholder="Digite o nome do pokemon" required>
+        </div>
+    
+        <div>
+            <label for="Tipo">Tipo: </label>
+            <input type="text" name="Tipo" id="input_tipo" placeholder="Digite o tipo do pokemon" required>
+        </div>
+    
+        <div>
+            <label for="Image">Imagem:</label>
+            <input type="src" name="Image" id=input_image placeholder="Imagem do pokemon" required>
+        </div>
+    
+        <div>
+            <label for="Descricao">Descrica:</label>
+            <input type="text" name="Descricao" id=input_desc placeholder="Digite a descricao do pokemon" required>
+        </div>
+
+        <div>
+            <label for="Altura">Altura:</label>
+            <input type="number" name="Altura" id="input_altura" placeholder="Digite a altura do pokemon" required>
+        </div>
+
+        <div>
+            <label for="Peso">Peso:</label>
+            <input type="number" name="Peso" id="input_peso" placeholder="Digite o peso do pokemon" required>
+        </div>
+
+        <div>
+            <label for="Categoria">Categoria:</label>
+            <input type="text" name="Categoria" id="input_categoria" placeholder="Digite a categoria do pokemon" required>
+        </div>
+
+        <div>
+            <label for="Habilidade">Habilidade:</label>
+            <input type="text" name="Habilidade" id="input_habilidade" placeholder="Digite a habilidade do pokemon" required>
+        </div>
+
+</h3>
+</header>
+ 
+ </main>
+
+        <button type="submit">Adicionar</button>
+    </form>
+</section>
+
+
+</body>
+</html>

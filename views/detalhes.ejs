@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes dos pokemon</title>
+    <link rel="icon" href="/IMG/icon.jpg">
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body>
+<header>
+
+<h1>
+    <nav>
+    <p class = "botao1"><a href="http://localhost:3000">Home</a></p>
+    <p class = "botao2"><a href="http://localhost:3000/Cadastro">Cadastro</a></p>
+    </nav>
+</h1>
+
+</header>
+
+<header> 
+   <Section class="container">
+<h2>
+    <main>
+    <% Pokedex.forEach(item=> {%>
+        <p class="imgg">
+        <img src="<%= item.Image %>"height = "160" width = "120" />
+        </p>
+        <p class="poke">
+          Nome:  <%= item.Nome%>
+        </p>
+        <p class="poke">
+          Tipo:  <%= item.Tipo%>
+        </p>
+        <p class="poke">
+        Descrição:  <%= item.Descricao%>
+        </p>
+        <p class="poke"> 
+        Altura:  <%= item.Altura%>
+        M
+        </p>
+        <p class="poke">
+        Peso:   <%= item.Peso%>
+        Kg
+        </p>
+        <p class="poke">
+        Categoria:  <%= item.Categoria%>
+        </p>
+        <p class="poke">
+        Habilidade   <%= item.Habilidade%>
+        </p>
+        <% }) %>
+    </main>
+</h2>
+ </Section> 
+</header>
+
+</body>
+</html>
