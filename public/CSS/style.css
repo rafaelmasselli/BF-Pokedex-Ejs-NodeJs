@@ -1,6 +1,6 @@
 body {
   background-position: center;
-  background-color: rgb(27, 26, 26);
+  background-color: rgb(255, 255, 255);
 }
 #fundo2 {
   background-image: url(../IMG/poke.jpg);
@@ -77,4 +77,38 @@ h2 {
   flex-wrap: wrap-reverse;
   justify-content: center;
   display: flex;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px rgba(50, 50, 0.22);
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+  transition: all 0.3s ease-out;
+}
+
+.card:hover {
+  transform: translate(-5);
+  cursor: pointer;
+}
+
+.card p {
+  color: #a3aaea;
+  font-size: 16px;
+}
+.blue {
+  border-left: 3px solid #4895ff;
+}
+.green {
+  border-left: 3px solid #3bb54a;
+}
+
+.red {
+  border-left: 3px solid #b3404a;
 }

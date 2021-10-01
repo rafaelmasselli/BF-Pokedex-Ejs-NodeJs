@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // set port usando a var de ambiante ou a 3000
 const path = require("path");
 const Pokedex = [
   {
+    id:"1",
     Numero:252,
     Nome:"Treecko",
     Tipo:"Planta",
@@ -15,6 +16,7 @@ const Pokedex = [
     Habilidade:"Esse pokemon tem garras que o faclita em escalas de paredes verticais"
 },
 {
+  id:"2",
     Numero:255,
     Nome:"Torchic",
     Tipo:"Fogo",
@@ -25,7 +27,8 @@ const Pokedex = [
     Categoria:"chick",
     Habilidade:"Torchic gruda em seu trainer, seguindo atras com pasos instaveis"
 },
-{
+{  
+    id:"3",
     Numero:"258",
     Nome:"Mudkip",
     Tipo:"Agua",
@@ -37,8 +40,7 @@ const Pokedex = [
     Habilidade:"A barbatana na cabeca de mudkip atua como um rada altamente sensivel."
 }
 ]
-
-let message = ""
+let = message = ""
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
@@ -53,25 +55,21 @@ app.get("/", (req, res) => {
  res.render("index" , {Pokedex, message});
 })
 
-
 app.get("/Cadastro", (req, res) => {
   res.render("cadastro");
 });
 
+
+
+
+
 app.get("/Detalhes", (req, res) => {
   res.render("detalhes", {Pokedex});
-
-
-
 });
 
 app.post("/info", (req, res) => {
-
   const {Numero,Nome,Tipo,Image,Descricao,Altura,Peso,Categoria,Habilidade} = req.body;
-
   const novo = {Numero:Numero, Nome:Nome, Tipo:Tipo, Image:Image, Descricao:Descricao, Altura:Altura, Peso:Peso, Categoria:Categoria, Habilidade:Habilidade}
-
-
 Pokedex.push(novo)
 
 message = `O pokemon ${Nome} foi adicionado`
@@ -79,6 +77,19 @@ message = `O pokemon ${Nome} foi adicionado`
 })
 
 
+
+app.get('/Detalhes/:id', function(req, res){
+  
+  let id = req.params.id;
+    for(let pokemon of Pokedex) {
+    if (pokemon.id === id) {
+      id = pokemon;
+      break;
+    }     
+  }
+  res.render("detalhes", { pokemon:id });
+
+});
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
