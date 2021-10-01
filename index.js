@@ -20,7 +20,7 @@ const Pokedex = [
     Numero:255,
     Nome:"Torchic",
     Tipo:"Fogo",
-    Image:"IMG/fogo.png",
+    Image:"IMG/Fogo.png",
     Descricao:"Esse pokemon respira fogo a mais de 1.800 graus fahreheit incluindo bolas de fogo que deixam o inimigo queimado",
     Altura:"0,4 ",
     Peso:"2.5 ",
@@ -32,7 +32,7 @@ const Pokedex = [
     Numero:"258",
     Nome:"Mudkip",
     Tipo:"Agua",
-    Image:"IMG/agua.png",
+    Image:"IMG/Agua.png",
     Descricao:"Esse pokemon pode determinar o que esta acontecendo ao seu redor sem usar os olhos",
     Altura:"0.4 ",
     Peso:"7.6 ",
@@ -56,7 +56,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/Cadastro", (req, res) => {
-  res.render("cadastro");
+  res.render("Cadastro");
 });
 
 
@@ -64,7 +64,7 @@ app.get("/Cadastro", (req, res) => {
 
 
 app.get("/Detalhes", (req, res) => {
-  res.render("detalhes", {Pokedex});
+  res.render("Detalhes", {Pokedex});
 });
 
 app.post("/info", (req, res) => {
@@ -87,7 +87,7 @@ app.get('/Detalhes/:id', function(req, res){
       break;
     }     
   }
-  res.render("detalhes", { pokemon:id });
+  res.render("Detalhes", { pokemon:id });
 
 });
 
