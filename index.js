@@ -78,19 +78,6 @@ message = `O pokemon ${Nome} foi adicionado`
 
 
 
-app.get('/Detalhes/:id', function(req, res){
-  
-  let id = req.params.id;
-    for(let pokemon of Pokedex) {
-    if (pokemon.id === id) {
-      id = pokemon;
-      break;
-    }     
-  }
-  res.render("Detalhes", { pokemon:id });
-
-});
-
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
 );  
