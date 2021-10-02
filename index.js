@@ -57,16 +57,16 @@ app.get("/", (req, res) => {
 
 // Cadastro
 
-app.get("/Cadastro", (req, res) => {
-  res.render("Cadastro");
+app.get("/cadastro", (req, res) => {
+  res.render("cadastro");
 });
 
 //Detalhes
 
- app.get("/Detalhes/:id", (req, res) => {
+ app.get("/detalhes/:id", (req, res) => {
     const id = req.params.id;
     const pokemon = Pokedex[id];
-    res.render("Detalhes",{pokemon,Pokedex});
+    res.render("detalhes",{pokemon,Pokedex});
   });
 
 
