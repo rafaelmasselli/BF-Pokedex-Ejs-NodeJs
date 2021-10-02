@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,43 +9,42 @@
   <link rel="icon" href="/IMG/icon.jpg">
   <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
-<% if(message !="" ) { %>
-  <section id="message">
-    <p>
-      <%= message %>
-    </p> <span id="close">&times;</span>
-  </section>
-  <% } %>
+  <% if(message !="" ) { %>
+    <section id="message">
+      <p>
+        <%= message %>
+      </p> <span id="close">&times;</span>
+    </section>
+    <% } %>
 
-<header>
-<h1>
-    <nav>
-    <p class="botao1"><a href="https://pokedex-projec-996.herokuapp.com/cadastro">Cadastro</a></p>
-    </nav>
-</h1>
-</header>
-<section class = "otimeze">
-<div class ="row">
-  <div class = "card green">
-  <main>
-<ul>
-<% Pokedex.forEach((item, find)=> { %>
-  <a href="https://pokedex-projec-996.herokuapp.com/detalhes/<%=find%>">
-  <li>
-      Nome: <%= item.Nome%> 
-  </li>
-      Tipo: <%= item.Tipo%>
-  <li>
-        <img src="<%= item.Image %>" height = "180" width = "180"/>
- <% }) %> 
-</a>
-</ul>
+      <header>
+        <h1>
+          <nav>
+            <p class="botao1"><a href="https://pokedex-projec-996.herokuapp.com/cadastro" alt = "Imagem do pokemon">Cadastro</a></p>
+          </nav>
+        </h1>
+      </header>
+      <section class="bodyA">
+        <div class="row">
+          <div class="card green">
+            <main id ="ordem">
+            
+                <% Pokedex.forEach((item, porta)=> { %>
+                  <a href="https://pokedex-projec-996.herokuapp.com/detalhes/<%=porta%>" style="color:rgb(189, 179, 179)">
+                 <p>    Nome: <%= item.Nome%></p>
+                  <p> Tipo: <%= item.Tipo%></p>
+                        <img src="<%= item.Image %>" height="180" width="180" />
+                        <% }) %>
+                  </a>
+            
 
-   </main>
-  </div>
-</div>
-</section>
-<script type="text/javascript" src="js/script.js"></script>
+            </main>
+          </div>
+        </div>
+      </section>
+      <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>

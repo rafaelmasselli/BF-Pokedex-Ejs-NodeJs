@@ -1,6 +1,6 @@
 body {
   background-position: center;
-  background-image: url("../IMG/fundo.png");
+  background-image: url("https://wallpaperaccess.com/full/47878.jpg");
   font-family: sans-serif;
   font-size: 1.5em;
   justify-content: center;
@@ -71,13 +71,8 @@ h1 {
 .botao1 {
   font-style: italic;
   font-size: 35px;
+  color: #b3404a;
 }
-
-.botao2 {
-  font-style: italic;
-  font-size: 35px;
-}
-
 h2 {
   display: flex;
   color: red;
@@ -179,4 +174,23 @@ fieldset.grupo .campo {
 .botao:hover {
   background: #943510;
   box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.bodyA {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: arial;
+}
+
+a {
+  text-decoration: none;
+}
+
+#ordem {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin: 20px;
 }
