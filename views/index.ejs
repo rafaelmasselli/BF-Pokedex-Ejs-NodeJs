@@ -22,23 +22,26 @@
       <header>
         <h1>
           <nav>
-            <p class="botao1"><a href="https://pokedex-projec-996.herokuapp.com/cadastro" alt = "Imagem do pokemon">Cadastro</a></p>
+            <p class="botao1"><a href="https://pokedex-projec-996.herokuapp.com/cadastro"
+                alt="Imagem do pokemon">Cadastro</a></p>
           </nav>
         </h1>
       </header>
       <section class="bodyA">
         <div class="row">
           <div class="card green">
-            <main id ="ordem">
-            
-                <% Pokedex.forEach((item, porta)=> { %>
-                  <a href="https://pokedex-projec-996.herokuapp.com/detalhes/<%=porta%>" style="color:rgb(189, 179, 179)">
-                 <p>    Nome: <%= item.Nome%></p>
-                  <p> Tipo: <%= item.Tipo%></p>
-                        <img src="<%= item.Image %>" height="180" width="180" />
-                        <% }) %>
-                  </a>
-            
+            <main id="ordem">
+
+              <% Pokedex.forEach((item, porta)=> { %>
+                <a href="https://pokedex-projec-996.herokuapp.com/detalhes/<%=porta%>" style="color:rgb(189, 179, 179)">
+                  <p> Nome: <%= item.Nome%>
+                  </p>
+                  <p> Tipo: <%= item.Tipo%>
+                  </p>
+                  <img src="<%= item.Image %>" height="180" width="180" />
+                  <% }) %>
+                </a>
+
 
             </main>
           </div>
