@@ -47,7 +47,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
-
   setTimeout(() => {
     message = "";
   }, 5000);
@@ -58,9 +57,6 @@ app.get("/", (req, res) => {
 app.get("/Cadastro", (req, res) => {
   res.render("Cadastro");
 });
-
-
-
 
 
 app.get("/Detalhes", (req, res) => {
