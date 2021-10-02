@@ -7,12 +7,8 @@
   <title>Home pokedex</title>
   <link rel="icon" href="/IMG/icon.jpg">
   <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="https://fonts.gstatic.com">
 </head>
 <body>
-
-
-
 <% if(message !="" ) { %>
   <section id="message">
     <p>
@@ -26,18 +22,13 @@
     <nav>
     <p class="botao1"><a href="https://pokedex-projec-996.herokuapp.com/Cadastro">Cadastro</a></p>
     </nav>
-
-
 </h1>
 </header>
 <section class = "otimeze">
-
-
 <div class ="row">
   <div class = "card green">
   <main>
 <ul>
-
 <% Pokedex.forEach((item, find)=> { %>
   <a href="http://localhost:3000/Detalhes/<%=find%>">
   <li>
@@ -53,10 +44,7 @@
    </main>
   </div>
 </div>
-
 </section>
-
-
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

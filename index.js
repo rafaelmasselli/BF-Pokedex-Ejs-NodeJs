@@ -39,21 +39,29 @@ const Pokedex = [
 ]
 let = message = ""
 
+//rota de arquivos
+
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
+
+
+//menu principal com mensagem 5 S
 
 app.get("/", (req, res) => {
   setTimeout(() => {
     message = "";
   }, 5000);
-
  res.render("index" , {Pokedex, message});
 })
+
+// Cadastro
 
 app.get("/Cadastro", (req, res) => {
   res.render("Cadastro");
 });
+
+//Detalhes
 
  app.get("/Detalhes/:id", (req, res) => {
     const id = req.params.id;
