@@ -71,12 +71,40 @@ app.get("/cadastro", (req, res) => {
 
 
 
-
-
-
-app.post("/info", (req, res) => {
+app.post("/New", (req, res) => {
   const {Numero,Nome,Tipo,Image,Descricao,Altura,Peso,Categoria,Habilidade} = req.body;
+  if (!Numero){
+  res.redirect("/cadastro", {message:"tabela numero esta vazia"})
+
+  }else if (!Nome){
+  res.redirect("/cadastro", {message:"tabela nome esta vazia"})
+
+  }else if (!Tipo){
+  res.redirect("/cadastro", {message:"tabela tipo esta vazia"})
+
+  }else if (!Image){
+  res.redirect("/cadastro", {message:"tabela Imagem esta vazia"})
+
+  }else if (!Descricao){
+  res.redirect("/cadastro", {message:"tabela Descricao esta vazia"})
+
+  }else if (!Altura){
+  res.redirect("/cadastro", {message:"tabela Altura esta vazia"})
+
+  }else if (!Peso){
+  res.redirect("/cadastro", {message:"tabela Peso esta vazia"})
+
+  }else if (!Categoria){
+  res.redirect("/cadastro", {message:"tabela Categoria esta vazia"})
+
+  }else if (!Habilidade){
+  res.redirect("/cadastro", {message:"tabela Habilidade esta vazia"})
+  }
+
+
   const novo = {Numero:Numero, Nome:Nome, Tipo:Tipo, Image:Image, Descricao:Descricao, Altura:Altura, Peso:Peso, Categoria:Categoria, Habilidade:Habilidade}
+  
+
 Pokedex.push(novo)
 
 message = `O pokemon ${Nome} foi adicionado`
