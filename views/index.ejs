@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home pokedex</title>
   <link rel="icon" href="/IMG/icon.jpg">
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/style2.css">
 </head>
 <body>
   <% if(message !="" ) { %>
@@ -26,20 +26,16 @@
           </nav>
         </h1>
       </header>
-
-
 <section class = "flex">
-              <% Pokedex.forEach((item, porta)=> { %>
-                <a href="/detalhes/<%=porta%>" style="color:rgb(189, 179, 179)">
-<div class = "tamanho">
-                  Nome: <%= item.Nome%>
+         <% Pokedex.forEach((item, porta)=> { %>
+          <div>
+              <p><a href="/detalhes/<%=porta%>" style="color:rgb(189, 179, 179)"></p>
+                 <p class = "fonte" ><%= item.Nome%> </p>
                   <img src="<%= item.Image %>" height="180" width="180" />
-                  Tipo: <%= item.Tipo%>
-                  <br>
-                  <br>
-                  <% }) %>
-</div>
+                 <p class = "fonte"> Tipo: <%= item.Tipo%> </p>
+                  </div>
                 </a>
+          <% }) %>
  </section>
       <script type="text/javascript" src="js/script.js"></script>
 </body>
