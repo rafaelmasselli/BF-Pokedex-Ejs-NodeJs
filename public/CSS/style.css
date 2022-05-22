@@ -1,187 +1,86 @@
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+ background: #606c88;
+ background: -webkit-linear-gradient(to right, #606c88, #3f4c6b);
+ background: linear-gradient(to right, #606c88, #3f4c6b);
+}
+
 section#message {
-  padding: 1.5rem;
-  background-color: rgb(197, 255, 214);
-  color: #004d04;
-  position: fixed;
-  top: 3rem;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
+ padding: 1.5rem;
+ background-color: rgb(197, 255, 214);
+ color: #004d04;
+ position: fixed;
+ top: 3rem;
+ left: 0;
+ right: 0;
+ z-index: 100;
+ text-align: center;
+ font-size: 1.1rem;
+ font-weight: 600;
 
-  width: 300px;
-  height: 100px;
-  border-radius: 10px;
+ width: 300px;
+ height: 100px;
+ border-radius: 10px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
 }
 
 span#close {
-  font-size: 2rem;
-  cursor: pointer;
-  transition: 0.3s;
+ font-size: 2rem;
+ cursor: pointer;
+ transition: 0.3s;
 }
 
 span#close:hover {
-  color: rgb(255, 0, 0);
-  transform: scale(1.5);
+ color: rgb(255, 0, 0);
+ transform: scale(1.5);
 }
 
-body {
-  background-position: center;
-  background-color: black;
-  font-family: sans-serif;
-  font-size: 1.5em;
-  justify-content: center;
-}
-#fundo2 {
-  background-position: center;
-  background-image: url(../IMG/poke.jpg);
+.topnav {
+ overflow: hidden;
+ background-color: #333;
 }
 
-#paragrafo {
-  margin-left: auto;
-  margin-right: auto;
-  width: 6em;
-}
-.container {
-  background-image: url("/IMG/poke.jpng");
-  display: flex;
-  justify-content: center;
+.topnav a {
+ float: left;
+ color: #f2f2f2;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
 }
 
-#cae {
-  background-image: url("/IMG/pokebola.png");
-  border: solid 3px;
-  box-shadow: 10px 10px 10px 5px black;
+.topnav a:hover {
+ background-color: red;
+ color: white;
 }
 
-h1 {
-  background-image: url("/IMG/pokebolas1.png");
-  background-position: center;
-  border-width: medium;
-  border-style: solid;
+.Container-Cards {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
 }
 
-.botao1 {
-  font-style: italic;
-  font-size: 35px;
-  color: #b3404a;
+.Card {
+ width: 13rem;
+ text-align: center;
+ background-color: black;
+ margin: 10px;
+ border-radius: 10px;
 }
-h2 {
-  display: flex;
-  color: red;
-  justify-content: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font: italic small-caps normal 18px/1.3em Arial, sans-serif;
+.Card:hover {
+ background-color: red;
 }
 
-.esp {
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-  display: flex;
-}
-.blue {
-  border-left: 3px solid #4895ff;
-}
-.red {
-  border-left: 3px solid #b3404a;
+.fonts {
+ color: white;
+ font-size: 15px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-#titulo {
-  font-family: sans-serif;
-  color: red;
-  margin-left: 7%;
-}
-
-fieldset {
-  border: 0;
-}
-
-input,
-button {
-  border-radius: 5px;
-}
-
-.campo {
-  margin-bottom: 1em;
-  display: block;
-}
-
-fieldset.grupo .campo {
-  float: left;
-  margin-right: 1em;
-}
-.campo input[type="text"],
-.camp select {
-  padding: 0.2em;
-  border: 1px solid;
-  box-shadow: 2px 2px 2px black;
-  display: block;
-}
-.campo select option {
-  padding-right: 1em;
-}
-
-.botao {
-  font-size: 1.2em;
-  background-attachment: #59429d;
-  border: 0;
-  margin-bottom: 1em;
-  color: rgb(3, 3, 3);
-  padding: 00.2em 0.6em;
-  box-shadow: 2px 2px 2px rgba(0);
-  text-shadow: 2px 2px 2px rgba(0);
-  position: absolute;
-}
-
-.botao:hover {
-  background: #943510;
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.bodyA {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  font-size: 1.2rem;
-  font-family: arial;
-}
-a {
-  text-decoration: none;
-}
-
-div {
-  max-width: 260px;
-}
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 200px;
-  margin: 0 auto;
-}
-.flex > div {
-  flex: 1 1 200px;
-  margin: 10px;
-}
-
-.tamanho {
-  max-width: 260px;
-  background-color: red;
-  border-radius: 10px;
-}
-.fundo-principal {
-  background-image: url("https://images5.alphacoders.com/462/462552.jpg");
-  background-position: center;
+.NoneLink {
+ text-decoration: none;
 }
