@@ -11,6 +11,17 @@
 ### Para iniciar o projeto você ira precisa do <a href="https://nodejs.org/en/">Node js</a> e de uma ide recomendo o <a href="https://visualstudio.microsoft.com/pt-br/downloads/">Visual studio</a> e do <a href="https://git-scm.com/downloads">git</a> para clonar o projeto
 
 
+## Ferramentas usadas no projeto
+
+### Front-end
+- [x] EJS
+- [x] CSS
+
+### Back-end
+- [x] Express
+- [x] Nodemon
+
+
 ## Descrição
 
 ### Uma pokedex que permite o usuario Criar e renderizar as informacoes criadas utilizando o json
@@ -33,7 +44,10 @@ $ npm start
 
 // Iniciando o projeto como Dev 
 $ npm start dev
-
 ```
-
-
+## Crud
+- [x] Get
+- [x] Find Get
+- [x] Create
+- [x] Patch
+- [x] Delete
